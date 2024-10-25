@@ -10,12 +10,14 @@
       }
 
       window.onload = function () {
+        const mode = getQueryParam("mode");
         const oobCode = getQueryParam("oobCode");
-        if (oobCode) {
-          // Redirige a la app con el código
+
+        if (mode === "resetPassword" && oobCode) {
+          // Redirige a la app con el código y la ruta de resetPassword
           window.location.href = `vinillum://resetPassword?oobCode=${oobCode}`;
         } else {
-          // Si no hay código, redirige a la app normalmente
+          // Si no es un código de restablecimiento, redirige a la app normalmente
           window.location.href = "vinillum://";
         }
       };
