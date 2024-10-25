@@ -13,7 +13,7 @@
         const oobCode = getQueryParam("oobCode");
         if (oobCode) {
           // Redirige a la app con el código
-          window.location.href = `vinillum://reset-password?oobCode=${oobCode}`;
+          window.location.href = `vinillum://resetPassword?oobCode=${oobCode}`;
         } else {
           // Si no hay código, redirige a la app normalmente
           window.location.href = "vinillum://";
