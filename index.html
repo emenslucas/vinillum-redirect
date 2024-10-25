@@ -15,7 +15,7 @@
 
         if (mode === "resetPassword" && oobCode) {
           // Redirige a la app con el código y la ruta de resetPassword
-          window.location.href = `vinillum://resetPassword?oobCode=${oobCode}`;
+          window.location.href = `vinillum://resetPassword/oobCode=${oobCode}`;
         } else {
           // Si no es un código de restablecimiento, redirige a la app normalmente
           window.location.href = "vinillum://";
