@@ -16,8 +16,11 @@
         if (mode === "resetPassword" && oobCode) {
           // Redirige a la app con el código y la ruta de resetPassword
           window.location.href = `vinillum://resetPassword/oobCode=${oobCode}`;
+        } else if (mode === "verifyEmail" && oobCode) {
+          // Redirige a la app con el código y la ruta de verifyEmail
+          window.location.href = `vinillum://verifyEmail/oobCode=${oobCode}`;
         } else {
-          // Si no es un código de restablecimiento, redirige a la app normalmente
+          // Si no se reconoce la acción, redirige a la app normalmente
           window.location.href = "vinillum://";
         }
       };
